@@ -1,0 +1,559 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+    --main-color:#1fa06eab;
+    --light-white:rgba(255,255,255,.5);
+    --light-black:rgba(0,0,0,.3);
+    --light-bg:rgba(255,255,255,.1);
+    --white:#fff;
+    --black:#000;
+    --card-border-color: rgba(24, 24, 27, 0.08);
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+*::-webkit-scrollbar {
+    width: 1.3rem;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: #111;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: #fff;
+    border: 5px solid transparent;
+    border-radius: 9px;
+    background-clip: content-box;
+}
+
+*::selection {
+    background-color: var(--black);
+    color: var(--main-color);
+}
+
+.mini-hero {
+  position: relative;
+  width: 100%;
+  min-height: 55vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background: linear-gradient(to right, rgb(0 0 0 / .9), rgb(0 0 0 / .7), rgb(0 0 0 / .5)), url(../../images/london-bridge.webp);
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.mini-hero h1 {
+  width: 88%;
+  min-height: 44vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-size: 6rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+
+@media (220px <= width <= 550px) {
+
+  .mini-hero {
+    min-height: 44vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  
+  .mini-hero h1 {
+    min-height: 32vh;
+    font-size: 4.4rem;
+  }
+
+}
+
+
+
+/* Header starts here */
+
+    .header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      width: 100%;
+      min-height: 12vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #000;
+      box-shadow: 0 0 1rem .1rem #111;
+      z-index: 1000;
+  }
+
+  .header .flex {
+      width: 88%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+  }
+
+  .header .flex .logo {
+      font-size: 2.5rem;
+      color: var(--main-color);
+  }
+
+  .header .flex .navbar a {
+      margin-left: 2rem;
+      font-size: 1.6rem;
+      font-weight: 300;
+      text-decoration: none;
+      color: var(--light-white);
+      transition: .2s linear;
+  }
+
+  .header .flex .navbar a:hover {
+      color: var(--white);
+  }
+
+  #menu-btn {
+      font-size: 2.5rem;
+      cursor: pointer;
+      color: var(--white);
+      display: none;
+  }
+
+
+
+
+/* Section-1 starts here */
+
+
+.section-1 {
+  width: 100%;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-block: 4rem;
+}
+
+.section-1-heading {
+    width: 88%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2.2rem;
+    margin-block: 8rem;
+    text-align: center;
+}
+
+.section-1-heading h2 {
+    font-size: 3.8rem;
+    font-weight: 400;
+    text-align: center;
+    color: var(--black);
+}
+
+.section-1-heading p {
+    font-size: 2.1rem;
+    font-weight: 300;
+}
+
+.section-1 .about-content {
+    width: 88%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5rem;
+    padding-top: 2rem;
+    padding-bottom: 6rem;
+}
+
+.about-content .param-1 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.about-content .param-1 h3 {
+    width: 100%;
+    font-size: 3.3rem;
+    font-weight: 300;
+    line-height: 4.2rem;
+}
+
+.about-content .param-1 p {
+    width: 100%;
+    font-size: 2rem;
+    font-weight: 200;
+}
+
+.about-content .param-1 ul {
+    width: 100%;
+    list-style: decimal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 2rem;
+    gap: 2.4rem;
+}
+
+.about-content .param-1 li {
+    width: 100%;
+    padding-left: 2rem;
+    font-size: 2.4rem;
+    font-weight: 300;
+}
+
+.about-content .param-1 .list-style {
+    list-style: square;
+    font-size: 2rem;
+    font-weight: 200;
+}
+
+.section-1 button {
+  font-size: 2rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  text-align: center;
+  padding: 1.4rem 4rem;
+  margin-bottom: 4rem;
+  color: var(--white);
+  background-color: var(--black);
+  border: 1px solid var(--white);
+  border-radius: .5rem;
+  transition: .4s;
+  cursor: pointer;
+}
+
+.section-1 button:hover {
+  background-color: transparent;
+  color: var(--black);
+  border: 1px solid var(--black);
+}
+
+.section-1 button:focus {
+  background-color: transparent;
+  color: var(--black);
+  border: 2px solid var(--black);
+}
+
+
+/* Section-1 ends here */
+
+
+
+/* Footer section starts here */
+
+
+.footer {
+  width: 100%;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--black);
+}
+
+.footer .box-container {
+  width: 88%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 1.5rem;
+  padding-block: 6rem;
+}
+
+.footer .box-container .box {
+  padding: 1rem 0;
+}
+
+.footer .box-container .box .logo {
+  font-size: 2rem;
+  text-decoration: none;
+  padding-bottom: 1rem;
+}
+
+.footer .box-container .box h3 {
+  font-size: 2.2rem;
+  font-weight: 300;
+  color: var(--white);
+  padding: 1rem 0;
+}
+
+.footer .box-container .box p {
+  font-size: 1.4rem;
+  font-weight: 200;
+  color: #aaa;
+  padding: 1rem 0;
+  line-height: 2;
+}
+
+.footer .box-container .box p a {
+  text-decoration: none;
+  color: #aaa;
+  transition: all .2s linear;
+}
+
+.footer .box-container .box p a:hover {
+  color: var(--main-color);
+}
+
+.footer .box-container .box p i {
+  padding-right: .5rem;
+  color: var(--main-color);
+}
+
+.footer .box-container .box .share {
+  padding-top: 1rem;
+}
+
+.footer .box-container .box .share a {
+  height: 4.5rem;
+  width: 4.5rem;
+  line-height: 4rem;
+  text-decoration: none;
+  font-size: 2rem;
+  border-radius: 50%;
+  font-size: 1.7rem;
+  border: 0.2rem solid var(--main-color);
+  color: var(--main-color);
+  margin-right: .5rem;
+  text-align: center;
+  transition: all .2s linear;
+}
+
+.footer .box-container .box .share a:hover {
+  background: var(--main-color);
+  color: var(--black);
+}
+
+.footer .box-container .box .share a p {
+  display: none;
+}
+
+.footer .box-container .box .links {
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: #aaa;
+  padding: 1rem 0;
+  display: block;
+}
+
+.footer .box-container .box .links:hover {
+  color: var(--main-color);
+}
+
+.footer .box-container .box .links:hover i {
+  padding-right: 2rem;
+}
+
+.footer .box-container .box .links i {
+  padding-right: .5rem;
+  color: var(--main-color);
+  transition: all .2s linear;
+}
+
+.credit {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--black);
+  border-top: 1px solid #333;
+  padding-block: 4rem;
+}
+
+.credit p {
+  width: 88%;
+  font-size: 1.4rem;
+  text-align: center;
+  color: #aaa;
+}
+
+.credit a {
+  color: var(--main-color);
+}
+
+
+/* Footer section ends here */
+
+.wapp-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.wapp-icon::after {
+  content: 'Contact Us on WhatsApp';
+  font-size: 1.4rem;
+  font-weight: 300;
+  font-family: 'Poppins', sans-serif;
+  position: absolute;
+  right: 5.5rem;
+  border: 1px solid var(--card-border-color);
+  border-radius: .5rem;
+  padding: 1.4rem 1.2rem;
+  width: max-content;
+  color: var(--black);
+  background-color: var(--white);
+  z-index: 1;
+  transition: .2s ease-in;
+  visibility: hidden;
+}
+
+.wapp-icon::before {
+  content: '';
+  position: absolute;
+  border-top: 1px solid var(--card-border-color);
+  border-right: 1px solid var(--card-border-color);
+  right: 4.8rem;
+  width: 1.4rem;
+  height: 1.4rem;
+  background-color: var(--white);
+  transform: rotate(44deg);
+  z-index: 2;
+  transition: .2s ease-in;
+  visibility: hidden;
+}
+
+.wapp-icon:hover::after {
+  right: 6.6rem;
+  visibility: visible;
+}
+
+.wapp-icon:hover::before {
+  right: 6rem;
+  visibility: visible;
+}
+
+.wapp-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+
+
+/* Important Media Queries */
+
+
+@media (max-width:991px){
+
+  html {
+      font-size: 55%;
+  }
+
+}
+
+@media (max-width:768px){
+
+  #menu-btn {
+     display: inline-block;
+  }
+
+  .header .flex {
+     position: relative;
+  }
+
+  .header .flex .navbar {
+     position: absolute;
+     top: 100%; left: 2rem; right: 2rem;
+     background-color: var(--light-black);
+     backdrop-filter: blur(.4rem);
+     -webkit-backdrop-filter: blur(.4rem);
+     border-radius: .5rem;
+     transform: scale(0);
+     transform-origin: top right;
+     padding: 1.5rem .5rem;
+  }
+
+  .header .flex .navbar.active {
+     transform: scale(1);
+     transition: .2s linear;
+  }
+
+  .header .flex .navbar a {
+     display: block;
+     padding: 1rem;
+     margin:.5rem 1rem;
+     color: var(--white);
+     border-radius: .5rem;
+  }
+
+  .header .flex .navbar a:hover {
+     background-color: var(--light-bg);
+  }
+
+}
+
+@media (max-width: 450px) {
+
+  html {
+      font-size: 50%;
+  }
+
+}
+
+
+
+.content {
+  display: none;
+}
+
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--black);
+  position: absolute;
+}
+
+.loader>div {
+  height: 80px;
+  width: 80px;
+  border: 10px solid #111;
+  border-top-color: var(--main-color);
+  border-radius: 50%;
+  animation: spin 1.5s infinite linear;
+}
+
+@keyframes spin {
+  100%{
+      transform: rotate(360deg);
+  }
+}
+
